@@ -4,6 +4,11 @@ This repository demonstrates a bug when using the `RecursiveDirectoryIterator` i
 
 ## Reproduction Steps
 
+* Windows 10 Pro
+* Version 2004
+* OS build 19041.546
+* Docker Desktop 2.4.0.0 (48506)
+
 ```bash
 git clone https://github.com/themizzi/wsl2-php-recursive-directory-iterator-bug.git
 cd wsl2-php-recursive-directory-iterator-bug
