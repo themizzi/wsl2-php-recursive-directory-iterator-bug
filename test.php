@@ -18,6 +18,7 @@ if (!mkdir($filesPath) && !is_dir($filesPath)) {
 }
 
 $max = 1;
+$stop = 5000;
 
 foreach(range(1, $max) as $index) {
     $message = sprintf("creating %s\n", $index);
@@ -33,7 +34,7 @@ do {
     $array2 = scandir($filesPath);
     ++$max;
     file_put_contents(__DIR__ . '/files/file' . $max, '');
-} while (count($array1) === count($array2));
+} while (count($array1) === count($array2) && $max <= $stop);
 
 $message = sprintf("found files %s vs %s\n", count($array1), count($array2));
 echo $message;
